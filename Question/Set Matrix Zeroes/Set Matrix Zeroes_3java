@@ -1,0 +1,31 @@
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        //base case
+        if(matrix.length<1) return;
+        
+        // to memorize the row and col of 0's cell;
+        int[] row = new int[matrix.length];
+        int[] col = new int[matrix[0].length];
+        
+        //setting row and col array to 1 when encounter 0 cell; 
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(matrix[i][j]==0){
+                    row[i] = 1;
+                    col[j] = 1;
+                }
+            }
+        }
+        
+        // setting 0 if either row and col array's value is 1;
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[0].length;j++){
+                if(row[i]==1 || col[j]==1){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+}
+// TC : O(2(N*M))
+// SC : O(N+M)
