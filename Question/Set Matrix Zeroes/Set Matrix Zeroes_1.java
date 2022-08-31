@@ -22,10 +22,10 @@ class Solution {
         //traversing in the list and marking row and col to 0;
         for(int p=0;p<list.size();p++){
             for(int row=0;row<matrix.length;row++){
-                matrix[row][map.get(p).j] = 0;
+                matrix[row][list.get(p).j] = 0;
             }
             for(int col=0;col<matrix[0].length;col++){
-                matrix[map.get(p).i][col] = 0;
+                matrix[list.get(p).i][col] = 0;
             }
         }
     }
