@@ -19,4 +19,4 @@ class Solution {
     }
 }
 //TC : O(n^4);
-//SC : O(1);
+//SC : O(n);
